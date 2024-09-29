@@ -8,6 +8,7 @@ Role Variables
 
 ```yaml
 acmesh_version: ACME_VERSION
+acmesh_email: ACME_ACCOUNT_EMAIL
 ```
 
 Dependencies
@@ -22,6 +23,7 @@ Example Playbook
 - hosts: servers
   vars:
     acmesh_version: "3.0.9"
+    acmesh_email: "example@example.org"
   roles:
     - role: pylabs.acmesh
 ```
