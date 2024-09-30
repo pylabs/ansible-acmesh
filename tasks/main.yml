@@ -4,10 +4,11 @@
     ansible.builtin.apt:
       name: "socat"
       state: "present"
-  - name: install acme.sh packages
+  - name: fetch acme.sh package
     ansible.builtin.unarchive:
       src: "https://github.com/acmesh-official/acme.sh/archive/refs/tags/{{ acmesh_version }}.zip"
       dest: "/tmp/acme.sh-{{ acmesh_version }}.zip"
+  - name: install acme.sh package
     ansible.builtin.command:
       cmd: "./acme.sh --install -m {{ acmesh_email }}"
       args:
