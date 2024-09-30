@@ -8,7 +8,7 @@
     ansible.builtin.unarchive:
       remote_src: yes
       src: "https://github.com/acmesh-official/acme.sh/archive/refs/tags/{{ acmesh_version }}.zip"
-      dest: "/tmp/acme.sh-{{ acmesh_version }}"
+      dest: "/tmp"
   - name: install acme.sh package
     ansible.builtin.command:
       cmd: "./acme.sh --install -m {{ acmesh_email }}"
