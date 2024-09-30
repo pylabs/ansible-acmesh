@@ -12,7 +12,7 @@
   - name: install acme.sh package
     ansible.builtin.command:
       cmd: "./acme.sh --install -m {{ acmesh_email }}"
-      args:
-        chdir: "/tmp/acme.sh-{{ acmesh_version }}"
+    args:
+      chdir: "/tmp/acme.sh-{{ acmesh_version }}"
   tags:
     - acmesh
